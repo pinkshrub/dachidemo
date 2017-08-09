@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>  
+        <meta charset="utf-8">
+        <title>DojoDachi Yo!</title>
+        <style>
+            *{
+                display: block;
+                background: repeating-linear-gradient(red, pink, green, chartreuse, yellow);
+                outline: lightcoral 5px solid;
+                border-radius: 10%;
+                box-shadow: 5px 5px 50px yellow;
+                padding: 10px;
+            }
+
+            section{
+                height: 100px;
+                margin: 10px;
+                outline: green 10px solid;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <header>
+                <label for="Happy">Happyness: </label>
+                <span ="Happy">@ViewBag.dachii.happyness</span>
+                <label for="Full">Fullness: </label>
+                <span ="Full">@ViewBag.dachii.fullness</span>
+                <label for="Meals">Meals: </label>
+                <span ="Meals">@ViewBag.dachii.meals</span>
+                <label for="Energy">Energy: </label>
+                <span ="Energy">@ViewBag.dachii.energy</span>
+            </header>
+            <section>
+                @if(ViewBag.dachii.status == "Your dachii done died yo...")
+                {
+                    <p>Your dachi done died!</p>
+                    <a href="reset">Reset</a> 
+                }
+                else if(ViewBag.dachii.happyness > 100 && ViewBag.dachii.fullness > 100 && ViewBag.dachii.energy > 100)
+                {
+                    <p>YOU DID THE WINING THING YO!!!!!!!!!!</p>
+                    <a href="reset">Reset</a>
+                }
+                else
+                {
+                    <span>@ViewBag.dachii.status</span>
+                }
+            </section>
+            <ul>
+                @if(ViewBag.dachii.fullness < 0 || ViewBag.dachii.happyness < 0 || (ViewBag.dachii.happyness > 100 && ViewBag.dachii.fullness > 100 && ViewBag.dachii.energy > 100)){
+                    <li>
+                        <a href="reset">Reset</a>
+                    </li>
+                }
+                else
+                {
+                    @if(ViewBag.dachii.energy >= 5){
+                        <li>
+                            <form action="process" method="post">
+                                <input type="hidden" name="Activity" value="Work">
+                                <input type="submit" value="Work">
+                            </form>
+                        </li>
+                        <li>
+                            <form action="process" method="post">
+                                <input type="hidden" name="Activity" value="Play">
+                                <input type="submit" value="Play">
+                            </form>
+                        </li>
+                    }
+                    <li>
+                        <form action="process" method="post">
+                            <input type="hidden" name="Activity" value="Sleep">
+                            <input type="submit" value="Sleep">
+                        </form>
+                    </li>
+                    @if(ViewBag.dachii.meals > 0){
+                        <li>
+                            <form action="process" method="post">
+                                <input type="hidden" name="Activity" value="Feed">
+                                <input type="submit" value="Feed">
+                            </form>
+                        </li>
+                    }
+                }
+            </ul>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,8 @@
+C:\Users\Alan Weber\Desktop\teacher\csharp\demo\dachis\dachii\bin\Debug\netcoreapp1.1\dachii.deps.json
+C:\Users\Alan Weber\Desktop\teacher\csharp\demo\dachis\dachii\bin\Debug\netcoreapp1.1\dachii.runtimeconfig.json
+C:\Users\Alan Weber\Desktop\teacher\csharp\demo\dachis\dachii\bin\Debug\netcoreapp1.1\dachii.runtimeconfig.dev.json
+C:\Users\Alan Weber\Desktop\teacher\csharp\demo\dachis\dachii\bin\Debug\netcoreapp1.1\dachii.dll
+C:\Users\Alan Weber\Desktop\teacher\csharp\demo\dachis\dachii\bin\Debug\netcoreapp1.1\dachii.pdb
+C:\Users\Alan Weber\Desktop\teacher\csharp\demo\dachis\dachii\obj\Debug\netcoreapp1.1\dachii.AssemblyInfo.cs
+C:\Users\Alan Weber\Desktop\teacher\csharp\demo\dachis\dachii\obj\Debug\netcoreapp1.1\dachii.dll
+C:\Users\Alan Weber\Desktop\teacher\csharp\demo\dachis\dachii\obj\Debug\netcoreapp1.1\dachii.pdb
